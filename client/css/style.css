@@ -1,0 +1,37 @@
+html, body {
+  min-height: 100%;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#data, #box {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 2.5em;
+}
+
+#box {
+  border: solid blue 5px;
+}
+
+#data {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+  overflow-y: scroll;
+  padding: 10px 20px;
+}
+
+#buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.4em;
+}

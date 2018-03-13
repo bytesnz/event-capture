@@ -1,0 +1,46 @@
+<!doctype HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Event Capture</title>
+  </head>
+  <body>
+    <h1 id="heading">Event Capture</h1>
+    <div id="text">
+      <p>
+        Thank you for taking part in the event capture. This is to capture the
+        events that your browser sends to this page whenever you interact the
+        blue-bordered box.
+      </p>
+
+      <p>
+        This information will help web sites make sure they are handling events
+        correctly.
+      </p>
+
+      <p>
+        When you are ready, please click/tap the button that displays what
+        input device(s) you have. Pointers include mice and pens.
+      </p>
+    </div>
+    <div id="box"></div>
+    <div id="data" style="display: none;">
+      <h1>Data Sent</h1>
+      <p>
+        This is all the data that has been sent. Each list of captured events
+        is sent with your browsers userAgent string, which identifies the type of
+        browser you have and a random string so that the events you send can be
+        correlated together.
+      </p>
+      <pre id="pre"></pre>
+    </div>
+    <div id="buttons">
+      <button id="button1">Pointer Device</button>
+      <button id="button2">Pointer Device + Touchscreen</button>
+      <button id="button3">Touchscreen</button>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

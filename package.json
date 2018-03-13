@@ -1,0 +1,30 @@
+{
+  "name": "event-capture",
+  "version": "1.0.0",
+  "description": "Browser event behaviour capture utility",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "htttps://github.com/bytesnz/eventCapture"
+  },
+  "keywords": [
+    "browser",
+    "events",
+    "event",
+    "capture"
+  ],
+  "author": {
+    "name": "Jack Farley",
+    "email": "or4e3dsw@bytes.nz",
+    "url": "https://bytes.nz"
+  },
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongodb": "^3.0.4",
+    "z-schema": "^3.19.1"
+  }
+}
