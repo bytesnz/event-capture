@@ -179,7 +179,7 @@
       sentData.push(compiled);
     };
 
-    ajaxReq.open('post', '/', true);
+    ajaxReq.open('post', './', true);
 
     ajaxReq.setRequestHeader('Content-Type', 'application/json');
     ajaxReq.send(JSON.stringify(compiled));

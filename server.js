@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const process = require('process');
 
 const jsonParser = require('body-parser').json;
 
@@ -8,7 +9,8 @@ const MongoClient = require('mongodb').MongoClient;
 const ZSchema = require('z-schema');
 const validator = new ZSchema();
 
-const port = 7643;
+const port = process.env.port || 7643;
+const uri = process.env.uri || '/';
 
 const mongoUri = 'mongodb://localhost:27017';
 const db = 'local';
@@ -132,14 +134,14 @@ const submissionSchema = {
 };
 
 app.use(jsonParser());
-app.use(express.static('./client'));
+app.use(uri, express.static('./client'));
 
 if (!validator.validateSchema(submissionSchema)) {
   console.error('Invalid schema', validator.getLastErrors());
   return 1;
 }
 
-app.post('/', (req, res) => {
+app.post(uri, (req, res) => {
   // Validate data
   if (validator.validate(req.body, submissionSchema)) {
     const data = {
@@ -168,4 +170,4 @@ app.post('/', (req, res) => {
 });
 
 app.listen(port);
-console.log('Listening on port', port);
+console.log('Listening on port', port, 'under', uri);
